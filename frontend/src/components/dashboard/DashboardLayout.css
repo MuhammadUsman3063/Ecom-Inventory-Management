@@ -1,0 +1,62 @@
+.dashboard-layout {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: scroll;
+  overflow-y: scroll;
+
+}
+
+/* Sidebar fixed full height */
+.sidebar {
+  width: 200px;
+  background-color: #1e293b;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+/* Right area beside sidebar */
+.main-content {
+  margin-left: 200px; /* equal to sidebar width */
+  width: calc(100% - 200px);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Header fixed at top of main content */
+.dashboard-header {
+  position: fixed;
+  top: 0;
+  left: 230px;  /* Sidebar width */
+  right: 0;
+  height: 80px;
+  background-color: #0f172a;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  font-weight: 600;
+  z-index: 1000;
+}
+
+/* Content area under header */
+.page-content {
+  
+  margin-left: 0px;   /* Sidebar width */
+  margin-top: 80px;     /* Header height */
+  margin-right: 0px;   /* Sidebar width */
+
+  padding: 1.5rem;
+  background-color: #f1f5f9;
+  min-height: calc(100vh - 80px);
+}
+

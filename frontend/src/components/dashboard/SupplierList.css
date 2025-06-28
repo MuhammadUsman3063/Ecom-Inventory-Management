@@ -1,0 +1,109 @@
+/* src/components/dashboard/SupplierList.css */
+
+/* General container styling */
+.supplier-list-container {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  font-family: "Inter", sans-serif; /* Using Inter font */
+}
+
+/* Heading styling */
+.supplier-list-container h2 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 25px;
+  text-align: center;
+  font-weight: 700;
+}
+
+/* Table wrapper for responsiveness */
+.supplier-table-wrapper {
+  overflow-x: auto; /* Ensures horizontal scrolling on small screens */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on touch devices */
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+/* Table styling */
+.supplier-list-container table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px; /* Minimum width to prevent squishing on smaller screens */
+}
+
+/* Table header (th) styling */
+.supplier-list-container th {
+  background-color: #f8f9fa;
+  color: #34495e;
+  padding: 12px 15px;
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 2px solid #e0e0e0;
+  white-space: nowrap; /* Prevent text wrapping in headers */
+}
+
+/* Table data (td) styling */
+.supplier-list-container td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #e0e0e0;
+  color: #495057;
+  white-space: nowrap; /* Prevent text wrapping in cells */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Add ellipsis for overflowing text */
+  max-width: 200px; /* Limit width of cells to prevent excessive stretching */
+}
+
+/* Alternating row colors for better readability */
+.supplier-list-container tbody tr:nth-child(even) {
+  background-color: #fcfcfc;
+}
+
+/* Hover effect for table rows */
+.supplier-list-container tbody tr:hover {
+  background-color: #f0f8ff; /* Light blue on hover */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* First and last column specific styling for rounded corners */
+.supplier-list-container thead tr th:first-child {
+  border-top-left-radius: 8px;
+}
+
+.supplier-list-container thead tr th:last-child {
+  border-top-right-radius: 8px;
+}
+
+.supplier-list-container tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 8px;
+}
+
+.supplier-list-container tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .supplier-list-container {
+    padding: 15px;
+    margin: 10px;
+  }
+
+  .supplier-list-container h2 {
+    font-size: 1.75rem;
+  }
+
+  .supplier-list-container th,
+  .supplier-list-container td {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .supplier-list-container h2 {
+    font-size: 1.5rem;
+  }
+}

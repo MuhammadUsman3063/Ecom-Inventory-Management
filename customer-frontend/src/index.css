@@ -1,0 +1,263 @@
+/* customer-frontend/src/index.css */
+
+/* Basic Reset */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8f8f8; /* Light background for the whole page */
+  color: #333; /* Default text color */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Global Container Styles - Yehi sabse important hai */
+/* Usman, is point mein jo samajhne wali baat hai woh yeh hai ki 'width: 100%' aur 'max-width: none'
+   property container ko poori page ki width lene mein madad karti hain.
+   'padding' se content kinaron se thoda andar rahega. */
+#root { /* Ya jo bhi your root div ka ID/class hai, usually Vite projects mein #root hota hai */
+  width: 100%; /* Take full width of the viewport */
+  max-width: none; /* Remove any max-width limits */
+  min-height: 100vh; /* Ensure it takes full viewport height */
+  display: flex;
+  flex-direction: column;
+  /* margin: 0 auto; - Remove if present, to stop centering and allow full width */
+  /* padding: 0px; - Reset global padding if any */
+}
+
+/* Navbar specific adjustments (if needed, otherwise leave current styles) */
+nav {
+    /* Your existing Navbar styles */
+    background-color: #333;
+    padding: 10px 20px; /* Thoda padding taaki content kinaron se chipke na */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+/* Content Area within pages */
+/* Usman, is point mein jo samajhne wali baat hai woh yeh hai ki
+   humne ProductListingPage aur ProductDetailPage mein jo inline styles diye thay
+   (jaise `maxWidth: '900px'`, `margin: '20px auto'`), unko ab CSS classes se override kar sakte hain
+   ya unki values badal sakte hain, taaki content ziada width le.
+   Hum in classes ko directly component ke div par apply karenge. */
+.page-container {
+    padding: 20px 40px; /* Overall padding for page content - left/right se ziada space */
+    flex-grow: 1; /* Allow content area to grow and take available space */
+    /* Remove max-width if present in inline styles of components like ProductListingPage, CartPage, ProductDetailPage */
+    /* Agar aap content ko thora center mein rakhna chahte hain lekin ziada width par,
+       toh `max-width: 1200px; margin: 20px auto;` jaisa kuch use kar sakte hain.
+       Lekin "poory me show ho" ke liye, filhal `max-width` remove karein. */
+}
+
+/* Specific adjustments for product cards etc. */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Slightly larger min-width for cards */
+    gap: 25px; /* Increase gap between cards */
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    padding: 20px; /* More padding inside card */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Slightly softer shadow */
+    transition: transform 0.2s ease-in-out; /* Smooth hover effect */
+    background-color: #fff; /* White background for cards */
+}
+
+.product-card:hover {
+    transform: translateY(-5px); /* Lift card on hover */
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px; /* Slightly taller images */
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    font-size: 1.3em;
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.product-card p {
+    font-size: 0.95em;
+    color: #666;
+    margin: 0 0 5px 0;
+}
+
+.product-card .price {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #007bff;
+    margin-top: 10px;
+}
+
+/* Buttons */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.2s ease-in-out;
+}
+
+button.primary {
+    background-color: #007bff;
+    color: white;
+}
+
+button.primary:hover {
+    background-color: #0056b3;
+}
+
+button.success {
+    background-color: #28a745;
+    color: white;
+}
+
+button.success:hover {
+    background-color: #218838;
+}
+
+button.danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+button.danger:hover {
+    background-color: #c82333;
+}
+
+/* Input Fields */
+input[type="number"],
+input[type="text"] {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+/* Product Detail Page Specific */
+.product-detail-container {
+    display: flex;
+    gap: 40px; /* More space between image and details */
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.product-detail-container img {
+    max-width: 400px; /* Larger image */
+    height: 600px;
+    object-fit: contain;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.product-detail-info {
+    flex: 1;
+}
+
+.product-detail-info h2 {
+    font-size: 2.2em;
+    margin-top: 0;
+    color: #222;
+}
+
+.product-detail-info .category {
+    font-size: 1.1em;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.product-detail-info .price {
+    font-size: 2em;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 25px;
+}
+
+.product-detail-info .description {
+    font-size: 1em;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 25px;
+}
+
+.product-detail-info .stock {
+    font-weight: bold;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* Cart Page Specific */
+.cart-item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    margin-bottom: 10px;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.cart-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-right: 25px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.cart-item-details {
+    flex-grow: 1;
+}
+
+.cart-item-details h3 {
+    margin: 0 0 8px 0;
+    font-size: 1.2em;
+}
+
+.cart-item-details p {
+    margin: 0;
+    color: #666;
+}
+
+.cart-item-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cart-total-section {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid #eee;
+    text-align: right;
+}
+
+.cart-total-section h3 {
+    font-size: 1.8em;
+    color: #222;
+    margin-bottom: 20px;
+}

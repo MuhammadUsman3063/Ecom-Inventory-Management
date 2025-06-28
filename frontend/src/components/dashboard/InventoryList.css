@@ -1,0 +1,90 @@
+/* src/components/dashboard/InventoryList.css */
+.inventory-list-container {
+    padding: 20px;
+    background-color: rgb(24, 9, 9);
+}
+
+.inventory-list-container h2 {
+    margin-bottom: 20px;
+    color: #e1d8d8;
+}
+
+.inventory-table-wrapper {
+    overflow-x: auto;
+}
+
+.inventory-table-wrapper th {
+    overflow-x: auto;
+    color: #1e7e34;
+}
+
+.inventory-table-wrapper table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+.inventory-table-wrapper th,
+.inventory-table-wrapper td {
+    border: 1px solid #e6d7d7;
+    padding: 8px;
+    text-align: left;
+}
+
+.inventory-table-wrapper th {
+    background-color: #f2f2f2;
+}
+
+/* Styles for the edit quantity feature */
+.inventory-table-wrapper td > input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.inventory-table-wrapper td > button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-left: 5px;
+}
+
+.inventory-table-wrapper td > button:hover {
+    background-color: #0056b3;
+}
+
+.inventory-table-wrapper td > button:first-of-type { /* Style for the "Edit Qty" button */
+    background-color: #28a745; /* Green color */
+}
+
+.inventory-table-wrapper td > button:first-of-type:hover {
+    background-color: #1e7e34;
+}
+
+
+
+/* src/components/dashboard/InventoryList.css */
+/* Existing styles ... */
+
+.low-stock {
+    background-color: #191814; /* Light yellow */
+}
+
+.low-stock-qty {
+    font-weight: bold;
+    color: rgb(225, 80, 7);
+}
+
+.out-of-stock {
+    color: red;
+    font-weight: bold;
+}
+
+
+

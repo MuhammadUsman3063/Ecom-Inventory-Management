@@ -1,0 +1,31 @@
+/* src/components/dashboard/OrdersPage.css */
+.orders-page {
+  padding: 20px;
+  background-color: #b91e28;
+  padding-top: 5px;
+}
+
+.orders-page h2 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 20px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+
+}
+
+.add-order-btn {
+  background-color: #0e130f;
+  color: rgb(215, 195, 195);
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  margin-left: 800px;
+}
+
+.add-order-btn:hover {
+  background-color: #218838;
+}

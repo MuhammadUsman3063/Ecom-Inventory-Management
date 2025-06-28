@@ -1,0 +1,312 @@
+
+
+/*html, body, #root {
+  height: 100%;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+
+
+
+
+
+
+
+.login-container {
+  max-width: 400px;
+  margin: 60px auto;
+  padding: 40px 35px;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(102, 126, 234, 0.3);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: transform 0.3s ease;
+}
+
+.login-container:hover {
+  transform: translateY(-5px);
+}
+
+.login-container h2 {
+  font-weight: 700;
+  font-size: 2rem;
+  color: #4a4a4a;
+  margin-bottom: 25px;
+  text-align: center;
+  letter-spacing: 1.5px;
+}
+
+.login-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-container label {
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 8px;
+  margin-top: 15px;
+  text-align: left;
+  user-select: none;
+}
+
+.login-container input[type="email"],
+.login-container input[type="password"] {
+  padding: 15px 20px;
+  margin-top: 5px;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.login-container input[type="email"]:focus,
+.login-container input[type="password"]:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 8px #667eea;
+}
+
+.login-container button {
+  margin-top: 30px;
+  padding: 16px 0;
+  border: none;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: background 0.3s ease;
+}
+
+.login-container button:hover {
+  background: linear-gradient(135deg, #5a67d8 0%, #5b3a82 100%);
+}
+
+.login-container p {
+  margin-top: 15px;
+ 
+
+  text-align: center;
+  font-size: 1rem;
+}
+
+.login-container p[style*="color: red"] {
+  color: #e74c3c;
+  font-weight: 600;
+}
+
+.login-container p[style*="color: green"] {
+  color: #2ecc71;
+  font-weight: 600;
+}
+*/
+
+/*html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container,
+.register-container {
+  width: 100%;
+  max-width: 400px;
+  padding: 40px 30px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  text-align: center;
+}
+
+form h2 {
+  margin-bottom: 25px;
+  font-size: 28px;
+  color: #333;
+}
+
+form label {
+  display: block;
+  margin-bottom: 6px;
+  color: #444;
+  text-align: left;
+  font-weight: 600;
+}
+
+form input,
+form select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+form input:focus,
+form select:focus {
+  border-color: #667eea;
+  outline: none;
+}
+
+form button {
+  width: 100%;
+  padding: 14px 0;
+  background-color: #667eea;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #5a67d8;
+}
+
+
+form p {
+  margin-top: 15px;
+  font-size: 0.95rem;
+  color: #333; /* Dark so it shows on white background 
+}
+form p span {
+  color: #667eea;
+  font-weight: 600;
+  cursor: pointer;
+}
+form p span:hover {
+  text-decoration: underline;
+}
+*/
+
+/* Page setup with gradient background and centering */
+/* General layout */
+
+
+body, html, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Login & Register container shared styles */
+.login-container,
+.register-container {
+  background-color: #ffffff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  box-sizing: border-box;
+  margin: 20px auto;
+}
+
+/* Register form container height fix */
+.register-container {
+  max-height: 90vh;  /* 👈 Prevents full-page white background */
+  overflow-y: auto;
+}
+
+/* Form heading */
+.login-container h2,
+.register-container h2 {
+  margin-bottom: 25px;
+  font-size: 26px;
+  color: #333;
+}
+
+/* Input & select styling */
+.login-container input,
+.register-container input,
+.register-container select {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 18px;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: 0.3s ease;
+}
+
+.login-container input:focus,
+.register-container input:focus,
+.register-container select:focus {
+  border-color: #667eea;
+  outline: none;
+}
+
+/* Placeholder style */
+::placeholder {
+  color: #555; /* Darker for better visibility */
+  font-size: 0.95rem;
+  opacity: 1; /* Make sure it's not faded */
+}
+
+
+/* Buttons */
+.login-container button,
+.register-container button {
+  width: 100%;
+  padding: 14px;
+  background: #667eea;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-container button:hover,
+.register-container button:hover {
+  background-color: #5a67d8;
+}
+
+/* Bottom message */
+.login-container p,
+.register-container p {
+  margin-top: 16px;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.login-container a,
+.register-container a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-container a:hover,
+.register-container a:hover {
+  text-decoration: underline;
+}

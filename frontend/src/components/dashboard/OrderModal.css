@@ -1,0 +1,105 @@
+/* src/components/dashboard/OrderModal.css */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  overflow-y: scroll;
+  overflow-x: scroll;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 40%;
+  max-width: 600px;
+  overflow-y: scroll;
+}
+
+.modal-content h3 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.modal-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  color: #333; /* Default text color for table */
+}
+
+.modal-content th,
+.modal-content td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.modal-content th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  color: #555; /* Header text color */
+}
+
+.modal-content tbody tr {
+  background-color: #fff; /* Default row background */
+}
+
+.modal-content tbody tr:nth-child(even) {
+  background-color: #f9f9f9; /* Even row background */
+}
+
+.modal-content tbody tr:hover {
+  background-color: #e9e9e9; /* Hover effect */
+}
+
+.modal-content tbody td {
+  color: #333; /* Cell text color */
+}
+
+.modal-content tbody input[type='number'] {
+  width: 60px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #e7dada; /* Input text color */
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modal-actions button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-left: 10px;
+}
+
+.modal-actions .save-btn {
+  background-color: #5cb85c;
+  color: white;
+}
+
+.modal-actions .cancel-btn {
+  background-color: #d9534f;
+  color: white;
+}
+
+.modal-content p {
+  text-align: center;
+  color: #777;
+}

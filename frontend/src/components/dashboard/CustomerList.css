@@ -1,0 +1,46 @@
+/* src/components/dashboard/CustomerList.css */
+.customer-list-container {
+  padding: 20px;
+  overflow-y: scroll;
+}
+
+.customer-list-container h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.customer-list-container table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #100e0e;
+ 
+}
+
+.customer-list-container th,
+.customer-list-container td {
+  border: 1px solid #100e0e;
+  padding: 8px;
+  text-align: left;
+}
+
+.customer-list-container th {
+  background-color: #1f0808;
+}
+
+/* src/components/dashboard/CustomerList.css */
+/* Existing styles ... */
+
+.delete-button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  margin-left: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}
